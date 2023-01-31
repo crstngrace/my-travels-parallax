@@ -1,0 +1,42 @@
+.article-container {
+  .headline {
+    position: fixed;
+    top: 100px;
+    z-index: 2;
+  }
+
+  .article-image {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 600px;
+    z-index: 3;
+
+    @supports (-webkit-touch-callout: inherit) {
+      background-attachment: scroll;
+    }
+  }
+
+  &:first-of-type .article-image {
+    height: 100vh;
+    z-index: 1;
+  }
+
+  article {
+    position: relative;
+    min-height: 300px;
+    z-index: 3;
+
+    .article-header {
+      word-break: break-word;
+      letter-spacing: -0.1em;
+      line-height: 1;
+    }
+
+    .article-content {
+      color: rgb(0, 0, 0, 0.6);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+footer {
+  margin-top: auto;
+}
+
+ul {
+  li {
+    &:not(:first-child)::before {
+      content: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 30em) {
+  ul {
+    li {
+      &:not(:first-child)::before {
+        content: '|';
+      }
+    }
+  }
+}
